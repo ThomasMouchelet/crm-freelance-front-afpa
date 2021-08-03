@@ -19,7 +19,16 @@ const InvoicesPage = () => {
         }
     }
 
-    return ( <h1>Invoices Page</h1> );
+    return (
+        <div>
+            <h1>Invoices Page</h1>
+            <ul>
+                {invoices.map(invoice => (
+                    <li><strong>{invoice.customer.companyName} :</strong> {invoice.amount} - {invoice.statut}</li>
+                ))}
+            </ul>
+        </div>
+     );
 }
  
 export default InvoicesPage;
